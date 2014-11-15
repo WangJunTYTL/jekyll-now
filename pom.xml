@@ -9,7 +9,13 @@
     <version>1.0-SNAPSHOP</version>
     <packaging>war</packaging>
     <description>maven project template</description>
-
+    <build>
+        <resources>
+            <resource>
+                <directory>${project.basedir}</directory>
+            </resource>
+        </resources>
+    </build>
     <dependencies>
     </dependencies>
 
