@@ -4,12 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.peaceful</groupId>
-    <artifactId>blog-index</artifactId>
+    <artifactId>blog</artifactId>
     <version>1.0-SNAPSHOP</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <description>maven project template</description>
 
     <build>
+        <directory>${project.basedir}/target</directory>
+        <outputDirectory>${project.build.directory}/classes</outputDirectory>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+        <sourceDirectory>${project.basedir}/</sourceDirectory>
         <resources>
             <resource>
                 <directory>${project.basedir}</directory>
