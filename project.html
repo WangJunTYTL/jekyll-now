@@ -101,8 +101,38 @@
                 <version>1.0-SNAPSHOT</version>
             </code>
             </p>
+            <h5>
+                配置 </h5>
+
+            <p><code>
+                auth.app.id=1 #客户端在服务中心注册id
+                auth.service.address=http://10.10.1.110:8080 #服务中心地址
+                auth.user.session.out.time=2 #user info 缓存时间
+                auth.system.session.out.time=300 #system info 缓存时间
+                auth.context.impl.class=xxx #实现AuthContext抽象类的路径，这个是可选配置
+            </code>
+            </p>
+            <h5> 获得服务
+            </h5>
+
+            <p>
+                <code>
+                    AuthService authService = AuthServiceImpl.getAuthService();
+                </code>
+            </p>
+            <h5>两个主要服务接口</h5>
+
+            <p>
+
+            <div>
+                getSystem() 获得客户端在权限中心注册的所有配置信息
+            </div>
+            <div>
+                getUser(String email) 获得客指定用户的所有配置信息
+            </div>
+            有了这两个接口你就可以很方便的进行扩展，因为通过这两个接口你拿到的基本上是所有配置信息，此外，不要担心性能问题，因为通过这两个接口拿到的
+            数据会缓存在客户端的服务器，你也没必要担心缓存数据过时问题，因为客户端会实时监测服务中心数据配置的变化，若有变化，客户端会立即重新加载缓存</p>
         </div>
     </div>
-</div>
 </body>
 </html>
