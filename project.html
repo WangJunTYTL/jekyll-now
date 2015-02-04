@@ -77,12 +77,13 @@
         <div style="clear: both">
             <p>源代码：<a href="https://github.com/WangJunTYTL/authmanage" target="_blank">https://github.com/WangJunTYTL/authmanage</a>
             </p>
-            <h5><b>开始使用</b></h5>
-            <ul>
-                <li>hibernate.cfg.xml文件取消注释，方便启动时自动创建数据库：<code>&lt;property name="hbm2ddl.auto"&gt;update&lt;/property&gt;</code></li>
-                <li>修改dev.properties文件设置数据库连接</li>
-                <li>若已安装maven，git,并正确把它们配置在path环境变量中，执行sh run.sh,然后访问<a href="http://localhost:8888" target="_blank"></a>http://localhost:8888</li>
-            </ul>
+            <h5><b>安装运行</b></h5>
+            <ol>
+                <li>运行之前请先安装maven和git</li>
+                <li>将代码clone到本地后，需要先修改./auth-web/src/man/filters/dev.properties,配置你自己的数据库连接</li>
+                <li>执行sh run.sh，成功启动后访问 http://localhost:8888，如果看到登陆页面，说明程序启动成功</li>
+                <li>关于登陆账号，请继续向下看数据库创建</li>
+            </ol>
         </div>
     </div>
 </div>
