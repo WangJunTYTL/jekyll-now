@@ -65,7 +65,7 @@
             <div style="float: left">
                 <h5 class="text-center">统一配置中心界面</h5>
 
-                <p class="text-center" >
+                <p class="text-center">
                     <img src="image/show1.jpg" style="max-width: 868px;">
                 </p>
 
@@ -77,7 +77,8 @@
         <div style="clear: both">
             <p>源代码：<a href="https://github.com/WangJunTYTL/authmanage" target="_blank">https://github.com/WangJunTYTL/authmanage</a>
             </p>
-            <h5><b>安装运行</b></h5>
+
+            <h3><b>安装运行</b></h3>
             <ol>
                 <li>运行之前请先安装maven和git</li>
                 <li>将代码clone到本地后，需要先修改./auth-web/src/man/filters/dev.properties,配置你自己的数据库连接</li>
@@ -85,8 +86,20 @@
                 <li>关于登陆账号，请继续向下看数据库创建</li>
             </ol>
             <h5><b>数据库创建</b></h5>
+
             <p>
-                当程序第一次成功启动后，会自动在你配置的数据库中创建数据表，这是利用hibernate的特点，你需要administrator表添加一对账号和密码 作为你当前的登陆账号，现在一个完整地权限中心已经运行起来了，接下来请看客户端SDK的介绍
+                当程序第一次成功启动后，会自动在你配置的数据库中创建数据表，这是利用hibernate的特点，你需要administrator表添加一对账号和密码
+                作为你当前的登陆账号，现在一个完整地权限中心已经运行起来了，接下来请看客户端SDK的介绍
+            </p>
+            <h5><b>客户端开发</b></h5>
+
+            <p>
+            <h5> 加入依赖： </h5>
+            <code>
+                <groupId>com.peaceful</groupId>
+                <artifactId>nuggets-auth-sdk</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </code>
             </p>
         </div>
     </div>
