@@ -85,54 +85,91 @@
                 <li>执行sh run.sh，成功启动后访问 http://localhost:8888，如果看到登陆页面，说明程序启动成功</li>
                 <li>关于登陆账号，请继续向下看数据库创建</li>
             </ol>
-            <h5><b>数据库创建</b></h5>
+            <h3><b>数据库创建</b></h3>
 
-            <p>
+            <blockquote>
                 当程序第一次成功启动后，会自动在你配置的数据库中创建数据表，这是利用hibernate的特点，你需要administrator表添加一对账号和密码
                 作为你当前的登陆账号，现在一个完整地权限中心已经运行起来了，接下来请看客户端SDK的介绍
-            </p>
-            <h5><b>客户端开发</b></h5>
+            </blockquote>
 
-            <p>
-            <h5> 加入依赖： </h5>
-            <code>
-                <groupId>com.peaceful</groupId>
-                <artifactId>nuggets-auth-sdk</artifactId>
-                <version>1.0-SNAPSHOT</version>
-            </code>
-            </p>
-            <h5>
-                配置 </h5>
-
-            <p><code>
-                auth.app.id=1 #客户端在服务中心注册id
-                auth.service.address=http://10.10.1.110:8080 #服务中心地址
-                auth.user.session.out.time=2 #user info 缓存时间
-                auth.system.session.out.time=300 #system info 缓存时间
-                auth.context.impl.class=xxx #实现AuthContext抽象类的路径，这个是可选配置
-            </code>
-            </p>
-            <h5> 获得服务
-            </h5>
-
-            <p>
-                <code>
-                    AuthService authService = AuthServiceImpl.getAuthService();
-                </code>
-            </p>
-            <h5>两个主要服务接口</h5>
+            <h3><b>客户端开发</b></h3>
 
             <p>
 
-            <div>
-                getSystem() 获得客户端在权限中心注册的所有配置信息
-            </div>
-            <div>
-                getUser(String email) 获得客指定用户的所有配置信息
-            </div>
-            有了这两个接口你就可以很方便的进行扩展，因为通过这两个接口你拿到的基本上是所有配置信息，此外，不要担心性能问题，因为通过这两个接口拿到的
-            数据会缓存在客户端的服务器，你也没必要担心缓存数据过时问题，因为客户端会实时监测服务中心数据配置的变化，若有变化，客户端会立即重新加载缓存</p>
+            <h3> 加入依赖： </h3>
+            <blockquote>
+                &lt;groupId&gt;com.peaceful&lt;/groupId&gt;<p/>
+                &lt;artifactId&gt;nuggets-auth-sdk&lt;/artifactId&gt;<p/>
+                &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+            </blockquote>
+            </p>
+            <h3>
+                配置 </h3>
+
+            <p>
+            <blockquote>
+                auth.app.id=1 #客户端在服务中心注册id<p/>
+                auth.service.address=http://10.10.1.110:8080 #服务中心地址<p/>
+                auth.user.session.out.time=2 #user info 缓存时间<p/>
+                auth.system.session.out.time=300 #system info 缓存时间<p/>
+                auth.context.impl.class=xxx #实现AuthContext抽象类的路径，这个是可选配置<p/>
+            </blockquote>
+            </p>
+
+            <h3> 获得服务
+            </h3>
+
+            <p>
+            <blockquote>
+                AuthService authService = AuthServiceImpl.getAuthService();
+            </blockquote>
+            </p>
+
+            <h3>两个主要服务接口</h3>
+
+            <p>
+            <blockquote>
+
+                getSystem() 获得客户端在权限中心注册的所有配置信息<p/>
+                getUser(String email) 获得客指定用户的所有配置信息<p/>
+                有了这两个接口你就可以很方便的进行扩展，因为通过这两个接口你拿到的基本上是所有配置信息，此外，不要担心性能问题，因为通过这两个接口拿到的
+                数据会缓存在客户端的服务器，你也没必要担心缓存数据过时问题，因为客户端会实时监测服务中心数据配置的变化，若有变化，客户端会立即重新加载缓存
+            </blockquote>
+            </p>
+
         </div>
+        <h3>扩展</h3>
+        <h4>客户端支持jstl表达式</h4>
+
+        <p>
+            下面是一个样例，会根据客户端系统的当前登录是否在页面渲染menuKey=goods的按钮，按钮的样式是bootstrap3.3版本定义，这需要根据你自己的系统 具体定制，具体样例参照类 MenuUtils
+
+        <blockquote>
+
+            <%@taglib uri="http://com.peacuful.com/auth/menu" prefix="menu" %><p></p>
+            &lt;menu:menu menuKey="goods" menuLevel="L1"&gt;
+        </blockquote>
+        </p>
+        <h4> 客户端支持注解配置
+        </h4>
+
+        <p>
+            下面是一个样例，会根据客户端系统的当前登录用户决定是否可以请求addMeta controller
+        <blockquote>
+            @AUTH.Function({"goods,mall"})<p></p>
+            @AUTH.Role("admin")<p></p>
+            @RequestMapping(value = "/item/xxx", method = {RequestMethod.POST})<p></p>
+            public void addMeta(HttpServletRequest request, HttpServletResponse response) {<p></p>
+
+            <p></p>
+            ...<p></p>
+
+            <p></p>
+            }<p></p>
+        </blockquote>
+
+        </p>
     </div>
+</div>
 </body>
 </html>
