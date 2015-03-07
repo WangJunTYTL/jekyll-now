@@ -5,7 +5,14 @@
     <title>WangJun</title>
     <link href="./css/bootstrap/bootstrap.css" rel="stylesheet">
     <link href="./css/nav.css" rel="stylesheet">
+    <!--<link href="./css/doc.css" rel="stylesheet">-->
+    <script src="./js/jquery-1.9.1.js"></script>
     <script src="./js/bootstrap/bootstrap.js"></script>
+    <style>
+        blockquote{
+            font-size: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,173 +22,199 @@
         <nav class="blog-nav">
             <a class="blog-nav-item" href="index.html">Home</a>
             <a class="blog-nav-item active" href="project.html">Project</a>
+            <a class="blog-nav-item" href="akka.html">Akka</a>
+            <a class="blog-nav-item" href="note.html">Note</a>
             <a class="blog-nav-item" href="about.html">About</a>
         </nav>
     </div>
 </div>
 
-<div class="container">
-    <h3 class="page-header">Code refactoring, is very important in the software life cycle</h3>
-    <h4 class="page-header">auth-manage</h4>
+<div class="container bs-docs-container">
+    <!--<h3 class="page-header">Code refactoring, is very important in the software life cycle</h4>-->
 
-    <div class="container">
-        <p>
-            这是一个统一管理系统权限，设计的目标是给开发者一个完整地权限管理系统，以便你能更专注自己系统业务的开发
+    <div class="row">
+        <!--<div class="col-md-2" role="complementary">
+            <nav class="">
+                <ul class="">
+                    <li>
+                        <a>概览</a>
+                        <ul class="text-left">
+                            <li><a href="#overview-doctype">HTML5 文档类型</a></li>
+                            <li><a href="#overview-mobile">移动设备优先</a></li>
+                            <li><a href="#overview-type-links">排版与链接</a></li>
+                            <li><a href="#overview-normalize">Normalize.css</a></li>
+                            <li><a href="#overview-container">布局容器</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>-->
+        <div class="col-md-12">
+            <h3 class="page-header">AuthManage</h3>
 
-        <div>
-            <ul>
-                <li>统一配置界面</li>
-                <li>简洁的客户端SDK包</li>
-                <li>SDK包支持不同语言系统</li>
-                <li>粒度随意掌控，可大可小</li>
-                <li>易扩展</li>
-                <li>支持spring</li>
-            </ul>
-        </div>
-        </p>
+            <div class="container">
+                <blockquote>                <p>
+                    这是一个统一管理系统权限，设计的目标是给开发者一个完整地权限管理系统，以便你能更专注自己系统业务的开发
 
-        <div>
-            <div style="float: left;">
-                <h5 class="text-center">功能简介</h5>
-
-                <p class="text-center">
-                    <img src="image/authDesign.jpg" width="786px">
+                <div>
+                    <ul>
+                        <li>统一配置界面</li>
+                        <li>简洁的客户端SDK包</li>
+                        <li>SDK包支持不同语言系统</li>
+                        <li>粒度随意掌控，可大可小</li>
+                        <li>易扩展</li>
+                        <li>支持spring</li>
+                    </ul>
+                </div>
                 </p>
-            </div>
-            <div style="float: left;margin-right: 30px;">
-                <h5 class="text-center">系统架构</h5>
+                </blockquote>
 
-                <p class="text-center">
-                    <img src="image/architecture.JPG">
-                </p>
-            </div>
-            <!--<div style="clear: both">
-                <h5 class="text-center">项目结构</h5>
 
-                <p class="text-center">
-                    <img src="image/project.jpg">
-                </p>
-            </div>-->
-            <div style="float: left">
-                <h5 class="text-center">统一配置中心界面</h5>
+                <div>
+                    <div style="float: left;">
+                        <h5 class="text-center">功能简介</h5>
 
-                <p class="text-center">
-                    <img src="image/show1.jpg" style="max-width: 786px;">
-                </p>
+                        <p class="text-center">
+                            <img src="image/authDesign.jpg" width="786px">
+                        </p>
+                    </div>
+                    <div style="float: left;margin-right: 30px;">
+                        <h5 class="text-center">系统架构</h5>
+
+                        <p class="text-center">
+                            <img src="image/architecture.JPG">
+                        </p>
+                    </div>
+                    <!--<div style="clear: both">
+                        <h5 class="text-center">项目结构</h5>
+
+                        <p class="text-center">
+                            <img src="image/project.jpg">
+                        </p>
+                    </div>-->
+                    <div style="float: left">
+                        <h5 class="text-center">统一配置中心界面</h5>
+
+                        <p class="text-center">
+                            <img src="image/show1.jpg" style="max-width: 786px;">
+                        </p>
+
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+                <div style="clear: both">
+                    <h4><b>下载</b></h4>
+                    <blockquote>
+                        Github：<a href="https://github.com/WangJunTYTL/authmanage" target="_blank">https://github.com/WangJunTYTL/authmanage</a>
+
+                        <p></p>
+                        <a href="https://github.com/WangJunTYTL/authmanage/tarball/master">tar.gz</a>
+
+                        <p></p>
+                        <a href="https://github.com/WangJunTYTL/authmanage/zipball/master">.zip</a>
+
+                        <p></p>
+
+                    </blockquote>
+
+                    <h4><b>安装运行</b></h4>
+                    <blockquote>
+                        <ol>
+                            <li>运行之前请先安装maven和git</li>
+                            <li>将代码clone到本地后，需要先修改./auth-web/src/man/filters/dev.properties,配置你自己的数据库连接</li>
+                            <li>执行sh run.sh，成功启动后访问 http://localhost:8888，如果看到登陆页面，说明程序启动成功</li>
+                            <li>关于登陆账号，请继续向下看数据库创建</li>
+                        </ol>
+                    </blockquote>
+                    <h4><b>数据库创建</b></h4>
+
+                    <blockquote>
+                        当程序第一次成功启动后，会自动在你配置的数据库中创建数据表，你需要administrator表添加一对账号和密码
+                        作为你当前的登陆账号，现在一个完整地权限中心已经运行起来了，接下来请看客户端SDK的介绍
+                    </blockquote>
+
+                    <h4><b>客户端开发</b></h4>
+
+                    <p>
+
+                    <h4> 加入依赖： </h4>
+                    <blockquote>
+                        &lt;groupId&gt;com.peaceful&lt;/groupId&gt;<p/>
+                        &lt;artifactId&gt;nuggets-auth-sdk&lt;/artifactId&gt;<p/>
+                        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+                    </blockquote>
+                    </p>
+                    <h4>
+                        配置 </h4>
+
+                    <p>
+                    <blockquote>
+                        auth.app.id=1 #客户端在服务中心注册id<p/>
+                        auth.service.address=http://10.10.1.110:8080 #服务中心地址<p/>
+                        auth.user.session.out.time=2 #user info 缓存时间<p/>
+                        auth.system.session.out.time=300 #system info 缓存时间<p/>
+                        auth.context.impl.class=xxx #实现AuthContext抽象类的路径，这个是可选配置<p/>
+                    </blockquote>
+                    </p>
+
+                    <h4> 获得服务
+                    </h4>
+
+                    <p>
+                    <blockquote>
+                        AuthService authService = AuthServiceImpl.getAuthService();
+                    </blockquote>
+                    </p>
+
+                    <h4>两个主要服务接口</h4>
+
+                    <p>
+                    <blockquote>
+
+                        getSystem() 获得客户端在权限中心注册的所有配置信息<p/>
+                        getUser(String email) 获得客指定用户的所有配置信息<p/>
+                        有了这两个接口你就可以很方便的进行扩展，因为通过这两个接口你拿到的基本上是所有配置信息，此外，不要担心性能问题，因为通过这两个接口拿到的
+                        数据会缓存在客户端的服务器，你也没必要担心缓存数据过时问题，因为客户端会实时监测服务中心数据配置的变化，若有变化，客户端会立即重新加载缓存
+                    </blockquote>
+                    </p>
+
+                </div>
+                <h4>扩展</h4>
+                <h4>客户端支持jstl表达式</h4>
 
                 <p>
+                    下面是一个样例，会根据客户端系统的当前登录是否在页面渲染menuKey=goods的按钮，按钮的样式是bootstrap3.3版本定义，这需要根据你自己的系统 具体定制，具体样例参照类
+                    MenuUtils
+
+                <blockquote>
+
+                    <%@taglib uri="http://com.peacuful.com/auth/menu" prefix="menu" %><p></p>
+                    &lt;menu:menu menuKey="goods" menuLevel="L1"&gt;
+                </blockquote>
+                </p>
+                <h4> 客户端支持注解配置
+                </h4>
+
+                <p>
+                    下面是一个样例，会根据客户端系统的当前登录用户决定是否可以请求addMeta controller
+                <blockquote>
+                    @AUTH.Function({"goods,mall"})<p></p>
+                    @AUTH.Role("admin")<p></p>
+                    @RequestMapping(value = "/item/xxx", method = {RequestMethod.POST})<p></p>
+                    public void addMeta(HttpServletRequest request, HttpServletResponse response) {<p></p>
+
+                    <p></p>
+                    ...<p></p>
+
+                    <p></p>
+                    }<p></p>
+                </blockquote>
 
                 </p>
             </div>
         </div>
-        <div style="clear: both">
-            <h3><b>下载</b></h3>
-            <blockquote>
-                Github：<a href="https://github.com/WangJunTYTL/authmanage" target="_blank">https://github.com/WangJunTYTL/authmanage</a>
-
-                <p></p>
-                <a href="https://github.com/WangJunTYTL/authmanage/tarball/master">tar.gz</a>
-
-                <p></p>
-                <a href="https://github.com/WangJunTYTL/authmanage/zipball/master">.zip</a>
-
-                <p></p>
-
-            </blockquote>
-
-            <h3><b>安装运行</b></h3>
-            <blockquote>
-                <ol>
-                    <li>运行之前请先安装maven和git</li>
-                    <li>将代码clone到本地后，需要先修改./auth-web/src/man/filters/dev.properties,配置你自己的数据库连接</li>
-                    <li>执行sh run.sh，成功启动后访问 http://localhost:8888，如果看到登陆页面，说明程序启动成功</li>
-                    <li>关于登陆账号，请继续向下看数据库创建</li>
-                </ol>
-            </blockquote>
-            <h3><b>数据库创建</b></h3>
-
-            <blockquote>
-                当程序第一次成功启动后，会自动在你配置的数据库中创建数据表，这是利用hibernate的特点，你需要administrator表添加一对账号和密码
-                作为你当前的登陆账号，现在一个完整地权限中心已经运行起来了，接下来请看客户端SDK的介绍
-            </blockquote>
-
-            <h3><b>客户端开发</b></h3>
-
-            <p>
-
-            <h3> 加入依赖： </h3>
-            <blockquote>
-                &lt;groupId&gt;com.peaceful&lt;/groupId&gt;<p/>
-                &lt;artifactId&gt;nuggets-auth-sdk&lt;/artifactId&gt;<p/>
-                &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
-            </blockquote>
-            </p>
-            <h3>
-                配置 </h3>
-
-            <p>
-            <blockquote>
-                auth.app.id=1 #客户端在服务中心注册id<p/>
-                auth.service.address=http://10.10.1.110:8080 #服务中心地址<p/>
-                auth.user.session.out.time=2 #user info 缓存时间<p/>
-                auth.system.session.out.time=300 #system info 缓存时间<p/>
-                auth.context.impl.class=xxx #实现AuthContext抽象类的路径，这个是可选配置<p/>
-            </blockquote>
-            </p>
-
-            <h3> 获得服务
-            </h3>
-
-            <p>
-            <blockquote>
-                AuthService authService = AuthServiceImpl.getAuthService();
-            </blockquote>
-            </p>
-
-            <h3>两个主要服务接口</h3>
-
-            <p>
-            <blockquote>
-
-                getSystem() 获得客户端在权限中心注册的所有配置信息<p/>
-                getUser(String email) 获得客指定用户的所有配置信息<p/>
-                有了这两个接口你就可以很方便的进行扩展，因为通过这两个接口你拿到的基本上是所有配置信息，此外，不要担心性能问题，因为通过这两个接口拿到的
-                数据会缓存在客户端的服务器，你也没必要担心缓存数据过时问题，因为客户端会实时监测服务中心数据配置的变化，若有变化，客户端会立即重新加载缓存
-            </blockquote>
-            </p>
-
-        </div>
-        <h3>扩展</h3>
-        <h4>客户端支持jstl表达式</h4>
-
-        <p>
-            下面是一个样例，会根据客户端系统的当前登录是否在页面渲染menuKey=goods的按钮，按钮的样式是bootstrap3.3版本定义，这需要根据你自己的系统 具体定制，具体样例参照类 MenuUtils
-
-        <blockquote>
-
-            <%@taglib uri="http://com.peacuful.com/auth/menu" prefix="menu" %><p></p>
-            &lt;menu:menu menuKey="goods" menuLevel="L1"&gt;
-        </blockquote>
-        </p>
-        <h4> 客户端支持注解配置
-        </h4>
-
-        <p>
-            下面是一个样例，会根据客户端系统的当前登录用户决定是否可以请求addMeta controller
-        <blockquote>
-            @AUTH.Function({"goods,mall"})<p></p>
-            @AUTH.Role("admin")<p></p>
-            @RequestMapping(value = "/item/xxx", method = {RequestMethod.POST})<p></p>
-            public void addMeta(HttpServletRequest request, HttpServletResponse response) {<p></p>
-
-            <p></p>
-            ...<p></p>
-
-            <p></p>
-            }<p></p>
-        </blockquote>
-
-        </p>
     </div>
 </div>
 </body>
