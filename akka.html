@@ -41,8 +41,17 @@
             </div>
             <div class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
-                    并发分布式框架：作者号称可以在jvm用来构建高并发，分布式，消息驱动式的程序。依据当前我使用的范围还只局限于并发与任务调度的使用层面上，
-                    在这两方面的表现还是很令我满意的
+                    <p>并发分布式框架：作者号称可以在jvm用来构建高并发，分布式，消息驱动式的程序。依据当前我使用的范围还只局限于并发与任务调度的使用层面上，
+                    在这两方面的表现还是很令我满意的。</p>
+                    <p>当前自己所熟悉的互联网开发模式有</p>
+                    ------------------------------
+                    <p>借组于队列，异步处理问题，处理不需要及时作出响应的任务</p>
+                    <p>使用缓存，减少对常用数据的查询</p>
+                    <p>使用内存数据库 加快查询某些需要快速查询响应的速度</p>
+                    <p>数据库，主从模式，读写分离，分库分表</p>
+                    <p>并发处理任务</p>
+                    ------------------------------
+                    <p>akka 框架可以用到的应用场景就是在队列和并发任务的处理上以及分布式应用</p>
                 </div>
             </div>
 
@@ -61,25 +70,13 @@
 
                         <li> 稳定--号称一年只有3s的宕机时间</li>
 
-                        <li> 高性能--号称 50 million msg/sec on a single machine. Small memory footprint; ~2.5 million actors per GB of heap</li>
+                        <li> 高性能--号称 50 million msg/sec on a single machine. Small memory footprint; ~2.5 million actors
+                            per GB of heap
+                        </li>
 
                         <li> 高容错--不保证所有的消息都被正确的发送与处理</li>
 
                     </ul>
-                </div>
-            </div>
-
-            <div class="panel-heading" role="tab">
-                <h4 class="panel-title">
-                    <span data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
-                          aria-controls="collapseOne">
-                        actor 模型
-                    </span>
-                </h4>
-            </div>
-            <div class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                    actor 之间是相互隔离的，它是并发执行的最小单元。actor主要用来处理消息，对各种消息做出相应的业务处理
                 </div>
             </div>
             <div class="panel-heading" role="tab">
@@ -95,6 +92,39 @@
                     所谓的消息驱动就是：actor表现的行为是和接收到消息内容有关，反过来我们可以这样理解，是消息在驱动actor的表现行为，这是我个人的理解，以这种理解来观看我们整个系统的运行
                     我们要做某件事情，那我们只需要给某个actor发送一个消息，actor就会明白我们要做什么事，然后这个actor可能还需要其它actor的配合，这样就会在actor之间形成消息的流动。所以就有了像上面
                     说的那样，在你构建并发系统时，你不在关心lock，关心thread等很麻烦有低级的这些原语。
+                </div>
+            </div>
+            <div class="panel-heading" role="tab">
+                <h4 class="panel-title">
+                    <span data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                          aria-controls="collapseOne">
+                        actor 模型
+                    </span>
+                </h4>
+            </div>
+            <div class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    actor 之间是相互隔离的，它是并发执行的最小单元。actor主要用来处理消息，对各种消息做出相应的业务处理
+
+                </div>
+            </div>
+
+            <div class="panel-heading" role="tab">
+                <h4 class="panel-title">
+                    <span data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                          aria-controls="collapseOne">
+                        actor 具体介绍
+                    </span>
+                </h4>
+            </div>
+            <div class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <ul>
+                        <li>actor path</li>
+                        <li>actor supervise</li>
+                        <li>actor router</li>
+                        <li>deadLetter</li>
+                    </ul>
                 </div>
             </div>
         </div>
