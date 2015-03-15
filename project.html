@@ -9,7 +9,7 @@
     <script src="./js/jquery-1.9.1.js"></script>
     <script src="./js/bootstrap/bootstrap.js"></script>
     <style>
-        blockquote{
+        blockquote {
             font-size: 15px;
         }
     </style>
@@ -51,21 +51,22 @@
         </div>-->
         <div class="col-md-12">
             <h3 class="page-header">AuthManage</h3>
+
             <div class="container">
-                <blockquote>                <p>
+                <blockquote><p>
                     这是一个统一管理系统权限，设计的目标是给开发者一个完整地权限管理系统，以便你能更专注自己系统业务的开发
 
-                <div>
-                    <ul>
-                        <li>统一配置界面</li>
-                        <li>简洁的客户端SDK包</li>
-                        <li>SDK包支持不同语言系统</li>
-                        <li>粒度随意掌控，可大可小</li>
-                        <li>易扩展</li>
-                        <li>支持spring</li>
-                    </ul>
-                </div>
-                </p>
+                    <div>
+                        <ul>
+                            <li>统一配置界面</li>
+                            <li>简洁的客户端SDK包</li>
+                            <li>SDK包支持不同语言系统</li>
+                            <li>粒度随意掌控，可大可小</li>
+                            <li>易扩展</li>
+                            <li>支持spring</li>
+                        </ul>
+                    </div>
+                    </p>
                 </blockquote>
 
 
@@ -179,7 +180,20 @@
                     </blockquote>
                     </p>
 
+                    <h4>客户端与服务中心数据同步原理</h4>
+
+                    <p>
+                    <blockquote>
+                        当客户端第一次去服务端获取一个用户的权限信息时，SDK包会把拿到的用户权限信息缓存到你自己的服务器，这样可以快速提高你的系统响应速度，同时当权限中心为很多系统提供时
+                        也减少了服务器的压力。所以如果权限中心数据发生改变时，客户端必须更新自己的缓存数据保证数据和服务器同步。为了达到这个目的，权限中心会在服务端和客户端都有一个当前
+                        最新数据的时间戳，可查看VCS类，作为当前数据的版本号.服务端在每次更新数据时都会重新记录当前的时间戳作为服务端的数据版本号。客户端会有一个类似于心跳的动作，每隔2s
+                        去和服务端数据版本号对比，如果客户端的版本号低于服务端，客户端就会把当前的缓存数据清除重新去服务端获取最新数据，然后更新自己的版本号与服务端相同。
+                    </blockquote>
+                    </p>
+
                 </div>
+
+
                 <h4>扩展</h4>
                 <h4>客户端支持jstl表达式</h4>
 
@@ -215,7 +229,21 @@
             </div>
         </div>
     </div>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"1","bdPos":"left","bdTop":"50"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    <script>window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdMiniList": false,
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16"
+        },
+        "slide": {"type": "slide", "bdImg": "1", "bdPos": "left", "bdTop": "50"},
+        "image": {"viewList": ["qzone", "tsina", "tqq", "renren", "weixin"], "viewText": "分享到：", "viewSize": "16"},
+        "selectShare": {"bdContainerClass": null, "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]}
+    };
+    with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
 </div>
 </body>
 </html>
