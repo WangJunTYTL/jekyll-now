@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="description" content="王俊的个人网站">
+    <meta name="keywords" content="wangjun,wangjuntytl,王俊">
+    <meta name="author" content="wangjun">
+    <meta name="robots" content="index,follow">
+    <title>WangJun</title>
+    <link href="../css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="../css/nav.css" rel="stylesheet">
+    <script src="../js/bootstrap/bootstrap.js"></script>
+</head>
+
+<body>
+
+<div class="blog-masthead">
+    <div class="container">
+        <nav class="blog-nav">
+            <a class="blog-nav-item " href="../index.html">Home</a>
+            <a class="blog-nav-item" href="../project.html">Project</a>
+            <a class="blog-nav-item" href="../akka.html">Akka</a>
+            <a class="blog-nav-item active" href="../note.html">Note</a>
+            <a class="blog-nav-item" href="../about.html">About</a>
+        </nav>
+    </div>
+</div>
+<div class="container">
+    <div class="text-left">
+        <h3 class="text-left page-header">java Object Class 分析 </h3>
+        <pre>
+
+private static native void registerNatives();
+static {
+     registerNatives();
+}
+
+关联c函数，类似于将c的函数导入guolai，这样你就可以调用c的函数了，主要导入的函数是
+static JNINativeMethod methods[] = {
+{“hashCode”, “()I”, (void *)&JVM_IHashCode},
+{“wait”, “(J)V”, (void *)&JVM_MonitorWait},
+{“notify”, “()V”, (void *)&JVM_MonitorNotify},
+{“notifyAll”, “()V”, (void *)&JVM_MonitorNotifyAll},
+{“clone”, “()Ljava/lang/Object;”, (void *)&JVM_Clone},
+}; clone
+所以当调用这些方法时，实际上是调用的c函数
+
+public native int hashCode();
+按照java约定规范，每个object都应该有一个hashcode值，主要用来支持哈希表，可以考虑这个问题，是怎么保证每个对象的哈希值接近不重复
+* As much as is reasonably practical, the hashCode method defined by
+* class {@code Object} does return distinct integers for distinct
+* objects. (This is typically implemented by converting the internal
+* address of the object into an integer, but this implementation
+* technique is not required by the
+* Java<font size="-2"><sup>TM</sup></font> programming language.)
+
+protected native Object clone() throws CloneNotSupportedException;
+这是一个native方法，按照约定，这个方法是返回一个对象的copy，相当于在内存中把这个对象重新复制了一下，可以研究下copy的深度
+copy需要满足的约定：x.clone != x   但x.clone.getClass() == x.getClass() 不是必须的要求。
+copy的默认规则，如果是primitive type直接返回，如果是引用类型，返回引用类型，所以注意引用类型
+如过一个类支持clone必须实现接口Cloneable,否则抛出CloneNotSupportedException
+protected void finalize() throws Throwable { }
+
+java垃圾回收机制规定，在一个对象呗销毁前必须要调用的方法
+
+
+public final native void notify();
+public final native void notifyAll();
+public final native void wait(long timeout) throws InterruptedException;
+
+一些方法主要是和线程有关
+
+总结，Object class 主要是一些native方法，用于jvm和系统减进行交互，还有就是实现java一些基本的约定，比如hashcode，clone这些方法的约定
+
+
+
+
+        </pre>
+    </div>
+</div>
+</body>
+</html>
