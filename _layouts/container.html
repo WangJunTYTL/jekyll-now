@@ -1,0 +1,17 @@
+---
+layout: header
+---
+
+<div class="container">
+  <h3 class="page-header">{{ page.title }}</h3>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  <div class="date">
+    更新于 {{ page.date | date: "%B %e, %Y" }}
+  </div>
+
+  {% include disqus.html %}
+</div>
