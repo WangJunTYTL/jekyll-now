@@ -18,7 +18,10 @@ markdown是我非常喜欢的一款用于排版的语法，本文主要是介绍
 
 ### jekyll 
 
-中文文档：http://jekyll.bootcss.com
+##### 中文文档：http://jekyll.bootcss.com
+
+
+如果安装jekyll出现下面错误
 
     ERROR:  Could not find a valid gem 'bundler' (>= 0), here is why:
               Unable to download data from https://rubygems.org/ - SSL_connect retur
@@ -32,7 +35,12 @@ markdown是我非常喜欢的一款用于排版的语法，本文主要是介绍
     1 gem installed
     
 
-http://ruby.taobao.org/
+参照这篇文章： http://ruby.taobao.org/
+
+
+添加评论功能
+
+http://www.ituring.com.cn/article/114888
 
 
 
