@@ -6,7 +6,18 @@ title: 怎样在github编写自己的博客
 
 1. github账号
 2. 本地安装版本控制工具git
-3. 在github上新建一个项目
+4. 熟悉markdown语法
+5. 知道jekyll语法
+6. github page 了解
+
+
+
+
+### jekyll 
+
+中文文档：http://jekyll.bootcss.com
+
+
 
 
 
