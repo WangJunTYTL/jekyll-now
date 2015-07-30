@@ -19,11 +19,24 @@ title: shell 基本语法
 
 ### 控制语句
 
+    ### if 
     if condition:thrn
         do thing
     elif condition;then
         do thing
     fi
+    #### demo 
+    if [ $x == 5 ];then
+        echo 'Y'
+    else
+        echo 'N'
+    fi
+    ### while 
+    
+    ### for
+    
+        
+        
     
     
     

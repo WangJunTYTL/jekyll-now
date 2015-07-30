@@ -20,7 +20,18 @@ markdown是我非常喜欢的一款用于排版的语法，本文主要是介绍
 
 中文文档：http://jekyll.bootcss.com
 
+    ERROR:  Could not find a valid gem 'bundler' (>= 0), here is why:
+              Unable to download data from https://rubygems.org/ - SSL_connect retur
+    ned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (
+    https://rubygems.org/latest_specs.4.8.gz)
+    Successfully installed bundler-1.7.12
+    Parsing documentation for bundler-1.7.12
+    WARNING:  Unable to pull data from 'https://rubygems.org/': SSL_connect returned
+    =1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (htt
+    ps://rubygems.org/latest_specs.4.8.gz)
+    1 gem installed
 
+http://ruby.taobao.org/
 
 
 
