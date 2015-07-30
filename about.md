@@ -3,13 +3,14 @@ layout: page
 title: About
 permalink: /about/
 ---
+2010~2014 郑州大学 计算机科学与技术
 
-Some information about you!
+软件工程师 
 
-### More Information
+e代驾 用户体系 研发主管
 
-A place to include any other types of information that you'd like to include about yourself.
 
-### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+### 联系方式
+
+[wangjuntytl@163.com](mailto:wangjuntytl@163.com)  
