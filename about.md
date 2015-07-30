@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: 关于
 permalink: /about/
 ---
 2010~2014 郑州大学 计算机科学与技术
@@ -8,8 +8,6 @@ permalink: /about/
 软件工程师 
 
 e代驾 用户体系 研发主管
-
-
 
 ### 联系方式
 
