@@ -48,7 +48,11 @@ title: shell 基本语法
     对于数学运算的赋值，使用$((...))有时显的比较繁复，可以使用let，格式如下：
     let intvar =expression
     let表示expression是个数学运算，无须使用$(())来作进一步表明，这样的赋值方式简洁很多。 等号前后是没有空格的，在expression的表达式中也是没有空格的，如果有空格必须用引号引起来，可以是单引号，也可以是双引号，let x=1+4；let x='1 + 4'；let x="1 + 4"，这三个同样都是给x赋值为5
-    
+
+### 字符串
+[http://justcoding.iteye.com/blog/1963463](http://justcoding.iteye.com/blog/1963463)
+
+
 ### 数据结构（只有数组）
     # 数组
     arr=(1 2 3) # 注意是空格分隔
