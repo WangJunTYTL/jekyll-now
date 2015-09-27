@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 _site
 .DS_Store
 .jekyll
@@ -11,3 +12,8 @@ package.json
 
 .idea
 .jekyll-metadata
+=======
+*.iml
+*.idea/*
+target/*
+>>>>>>> fda8d58010491c0b761b6bd9a98130319ca5a400
