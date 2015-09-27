@@ -20,10 +20,10 @@
 <div class="blog-masthead">
     <div class="container">
         <nav class="blog-nav">
-            <a class="blog-nav-item active" href="index.html">Home</a>
-            <a class="blog-nav-item" href="project.html">Project</a>
-            <a class="blog-nav-item" href="akka.html">Akka</a>
-            <a class="blog-nav-item" href="note.html">Note</a>
+            <a class="blog-nav-item" href="/authManage" id="authManage">AuthManage</a>
+            <a class="blog-nav-item" href="/akka" id="akka">Akka</a>
+            <a class="blog-nav-item" href="/akka" id="taskContainer">TaskContainer</a>
+            <a class="blog-nav-item" href="/blog" id="blog">Home</a>
             <!--<a class="blog-nav-item" href="about.html">About</a>-->
         </nav>
     </div>
@@ -41,7 +41,13 @@
         </footer>
     </div>
 </div>
-
 {% include analytics.html %}
+<div style="display: none" id="myNav">{% if page.active %}{{ page.active }} {% endif %}</div>
+<script>
+    $(function () {
+        var nav = $("#myNav").html();
+        $("#" + nav).attr("class", "blog-nav-item active");
+    });
+</script>
 </body>
 </html>
