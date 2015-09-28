@@ -32,6 +32,7 @@ active: authManage
 
                         <p class="text-left">
                             <img src="/images/authmanage/authDesign.jpg" width="786px">
+                            <a href="/images/authmanage/authDesign.jpg" class="mdimg">
                         </p>
                     </div>
                     <div>
@@ -39,6 +40,7 @@ active: authManage
 
                         <p class="text-left">
                             <img src="/images/authmanage/architecture.JPG">
+                            <a href="/images/authmanage/architecture.JPG" class="mdimg">
                         </p>
                     </div>
                     <!--<div style="clear: both">
@@ -53,6 +55,7 @@ active: authManage
 
                         <p class="text-left">
                             <img src="/images/authmanage/show1.jpg">
+                            <a href="/images/authmanage/show1.jpg" class="mdimg">
                         </p>
 
                         <p>
@@ -206,17 +209,26 @@ active: authManage
     img{
         max-width: 666px;
     }
+    .mdimg{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 800px){
     img{
         display: none;
     }
+    .mdimg{
+        display: block;
+    }
 }
 
 @media screen and (min-width: 1075px){
     img{
         max-width: 786px;
+    }
+    .mdimg{
+        display: none;
     }
 }
 
