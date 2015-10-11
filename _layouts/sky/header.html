@@ -10,6 +10,14 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
           href="{{ site.baseurl }}/feed.xml"/>
 
+    <style>
+        @media screen and (max-width: 800px){
+            img{
+                width: 400px;
+            }
+        }
+    </style>
+
     <script src="{{ site.baseurl }}/bootstrap/js/jquery-1.9.1.js"></script>
     <script src="{{ site.baseurl }}/bootstrap/js/bootstrap.js"></script>
 
@@ -53,15 +61,6 @@
     $(function () {
         var nav = $("#myNav").html();
         $("#" + nav).attr("class", "blog-nav-item active");
-
-        function ReImgSize(){
-            for (var j=0;j<document.images.length;j++)
-            {
-                document.images[j].width=(document.images[j].width>420)?"420":document.images[j].width;
-            }
-        }
-
-        ReImgSize()
     });
 </script>
 </body>
