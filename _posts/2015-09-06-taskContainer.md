@@ -48,7 +48,7 @@ active: taskContainer
 
 【任务容器】：我们把整个组件系统称之为任务容器组件，上面的介绍的这些组件成员对我们开发人员是完全透明，在使用时，开发者不必关心这些这些成员，只需要把你要做的事情告诉任务容器，任务容器负责整个任务中心的调度，负载与异常处理。系统各个成员的协作设计采用`akka`框架。akka是一个优秀的无锁并发设计组件，它实现了actor模型，利用这种模型可以很方便的设计出上面所说的这几种成员对象并协调这些成员对象的工作。
 
-<img src="/images/task/design.png" width='600px' ></img>
+<img src="/images/task/design.png" width='666px' ></img>
 
 ### 并发模型
 
@@ -315,7 +315,7 @@ active: taskContainer
 
 介绍 TODO                          
 
-<img src="/images/task/monitor.png" width="600px">
+<img src="/images/task/monitor.png" width="666px">
 
 
 Create by WangJun on 2015-09-05
