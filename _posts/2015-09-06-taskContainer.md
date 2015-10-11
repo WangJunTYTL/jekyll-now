@@ -11,7 +11,6 @@ active: taskContainer
 
 先看一个简单的用例，通过注册原生的Java对象到任务容器中，快速让你的方法实现异步并发调用：
 
-{% highlight java %}
 
 	// Java原生对象
 	public class Hello {
@@ -27,7 +26,6 @@ active: taskContainer
 	
 	// 此处调用test方法已经变成异步并发调用了
 	hello.test("hello world");
-{% endhighlight %}
 ### 版本
 
 此文档只适合2.0-SNAPSHOT版本
