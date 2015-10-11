@@ -11,7 +11,7 @@ active: taskContainer
 
 先看一个简单的用例，通过注册原生的Java对象到任务容器中，快速让你的方法实现异步并发调用：
 
-	/ Java原生对象
+	// Java原生对象
 	public class Hello {
 
     	@Task(queue = "testQueue")
@@ -20,10 +20,10 @@ active: taskContainer
     	}
 	}
 	
-	/ 注册原生Java对象到任务容器中
+	// 注册原生Java对象到任务容器中
 	Hello hello = TaskSchedule.registerASyncClass(Hello.class);
 	
-	/ 此处调用test方法已经变成异步并发调用了
+	// 此处调用test方法已经变成异步并发调用了
 	hello.test("hello world");
 
 ### 版本
@@ -52,7 +52,7 @@ active: taskContainer
 
 ### 并发模型
 
-/todo actor并发模型介绍
+// TODO actor并发模型介绍
 
 ### 构建
 
@@ -67,9 +67,9 @@ active: taskContainer
 如果你使用的是window平台，请按下面步骤操作：
 
 	
-	#   1. git clone https:/github.com/WangJunTYTL/peaceful-basic-platform.git
+	#   1. git clone https://github.com/WangJunTYTL/peaceful-basic-platform.git
 	#   2. 进入peaceful-basic-platform 目录 ，执行 mvn install  -Dmaven.test.skip=true
-	#   3. git clone https:/github.com/WangJunTYTL/redismanage.git
+	#   3. git clone https://github.com/WangJunTYTL/redismanage.git
 	#   4. 进入redismanage 目录 ，执行 mvn install  -Dmaven.test.skip=true
 	#   5. 进入task-container 目录，执行 mvn install  -Dmaven.test.skip=true
 
@@ -144,7 +144,7 @@ active: taskContainer
 		
 ##### 2. 作为job机单独运行
 
-	/todo	管理命令、界面待开发
+	/TODO	管理命令、界面待开发
 	
 ##### 启动后输出以下log日志说明启动成功
 	
@@ -253,10 +253,10 @@ active: taskContainer
 
 	public static void forceChangeTaskName() {
     
-            / 强制更改任务名称，使其可以进入到aa123的队列
+            // 强制更改任务名称，使其可以进入到aa123的队列
             TaskSchedule.Schedule.forceChangeTaskName.set("aa123");
             hello.test("hello world");
-            / 打断强制过程，使test2方法的调入继续进入到testQueue2队列
+            // 打断强制过程，使test2方法的调入继续进入到testQueue2队列
             TaskSchedule.Schedule.forceChangeTaskName.remove();
             hello.test2("123");
     
@@ -268,7 +268,7 @@ active: taskContainer
 
 该功能的存在只是作为该组件的一个附带功能，主要是为了弥补spring的定时job不足的地方。在spring的job中，你不可以在code需要的地方启动的一个job，也不可以在code需要的地方随时停掉job。
 
-       / 新建一个job,名为test 
+       // 新建一个job,名为test 
        TimingJob.newJob("test", new Job() {
 
                    @Override
@@ -277,13 +277,13 @@ active: taskContainer
                    }
                }
        );
-       / 5s后执行名为test的job一次
+       // 5s后执行名为test的job一次
        TimingJob.scheduleOnce(5,TimeUnit.SECONDS,"test");
        
-       / 立马执行名为test的job，并每隔一秒执行一次
+       // 立马执行名为test的job，并每隔一秒执行一次
        TimingJob.schedule(scala.concurrent.duration.Duration.Zero(),1, TimeUnit.SECONDS, "test");
        
-       /取消名为test的job
+       // 取消名为test的job
        TimingJob.cancel("test");
 
 ### 任务容器集群
@@ -305,6 +305,7 @@ active: taskContainer
 
 
 ### 监控
+
 介绍 TODO                          
 
 <img src="/images/task/monitor.png" width="600px">
